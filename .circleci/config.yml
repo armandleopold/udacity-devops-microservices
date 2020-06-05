@@ -19,6 +19,7 @@ jobs:
         # fallback to using the latest cache if no exact match is found
         - v1-dependencies-
       - run:
+        name: install dependencies
         command: |
           python3 -m venv venv
           . venv/bin/activate
@@ -32,6 +33,7 @@ jobs:
           - ./venv
       # run lint!
       - run:
+        name: run lint
         command: |
           . venv/bin/activate
           make lint 
