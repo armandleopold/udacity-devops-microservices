@@ -6,7 +6,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/repo
+    working_directory: ~/udacity-devops-microservices
     docker:
       - image: python:3.7.3-stretch  # primary container for the build job
 
