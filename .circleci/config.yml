@@ -12,3 +12,7 @@ jobs:
             # when lock file changes, use increasingly general patterns to restore cache
             - v1-dependencies-{{ checksum "requirements.txt" }}
             - v1-dependencies-
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install
