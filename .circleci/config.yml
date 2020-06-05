@@ -14,5 +14,5 @@ jobs:
             - v1-dependencies-
       - run:
           command: |
-            sudo pip install pipenv
+            pip install pipenv
             pipenv install
