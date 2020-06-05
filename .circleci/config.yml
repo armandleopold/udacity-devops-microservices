@@ -7,3 +7,8 @@ jobs:
 
     steps:
       - checkout
+      - restore_cache:
+          keys:
+            # when lock file changes, use increasingly general patterns to restore cache
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-
